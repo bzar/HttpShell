@@ -51,7 +51,7 @@ class HttpShell(object):
 
         # all printing is done via the logger, that way a non-ANSI printer
         # will be a lot easier to add retroactively
-        self.logger = loggers.AnsiLogger()
+        self.logger = loggers.AnsiLogger(not args.no_format)
 
         self.init_readline()
 
